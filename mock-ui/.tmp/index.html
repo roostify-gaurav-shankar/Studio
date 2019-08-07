@@ -7,6 +7,7 @@
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;display=swap" rel="stylesheet">
+    <link href="fonts/fontawesome/css/all.css" rel="stylesheet">
     <!--title Baselayout-->
     <title>Baselayout - Project</title>
     <link rel="stylesheet" href="styles/site.css">
@@ -22,38 +23,70 @@
               <li id="menu" class="left-nav"><a href="javascript:;" class="left-nav-item"><i class="icon-menu"></i></a></li>
             </ul>
             <ul class="d-flex flex-column flex-grow-1 list-unstyled">
-              <li class="left-nav active"><a href="#" class="left-nav-item"><i class="icon-customers"></i><span class="left-nav-text">Customer</span></a></li>
+              <li class="left-nav active"><a href="#" class="left-nav-item"><i class="fas fa-border-style"></i><span draggable="true" class="left-nav-text">
+                    <input placeholder="Input" disabled class="form-control"></span></a></li>
               <li class="left-nav-seperator"></li>
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-home"></i><span class="left-nav-text">Home</span></a></li>
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-system"></i><span class="left-nav-text">System</span></a></li>
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-media"></i><span class="left-nav-text">Media</span></a></li>
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-reports"></i><span class="left-nav-text">Reports</span></a></li>
+              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-home"></i><span class="left-nav-text">
+                    <button draggable="true" id="drag1" class="btn btn-primary">Button</button></span></a></li>
+              <li class="left-nav"><a href="#" class="left-nav-item"><i class="fas fa-font"></i><span draggable="true" ondragstart="drag(event)" class="left-nav-text">Text</span></a></li>
             </ul>
-            <ul class="d-flex flex-column list-unstyled">
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-support"></i><span class="left-nav-text">Support ( Zendesk<i class="icon-export ml-2 mr-1"></i> )</span></a></li>
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-user"></i><span class="left-nav-text">John Username</span></a></li>
-              <li class="left-nav"><a href="#" class="left-nav-item"><i class="icon-settings"></i><span class="left-nav-text">Settings</span></a></li>
-            </ul>
+            <!---->
+            <!--    li.left-nav-->
+            <!--        a(href="#").left-nav-item-->
+            <!--            i.icon-media-->
+            <!--            span.left-nav-text Media-->
+            <!---->
+            <!--    li.left-nav-->
+            <!--        a(href="#").left-nav-item-->
+            <!--            i.icon-reports-->
+            <!--            span.left-nav-text Reports-->
+            <!---->
+            <!---->
+            <!--ul.d-flex.flex-column.list-unstyled-->
+            <!---->
+            <!--    li.left-nav-->
+            <!--        a.left-nav-item(href='#')-->
+            <!--            i.icon-support-->
+            <!--            span.left-nav-text-->
+            <!--                | Support ( Zendesk-->
+            <!--                i.icon-export.ml-2.mr-1-->
+            <!--                |  )-->
+            <!---->
+            <!--    li.left-nav-->
+            <!--        a(href="#").left-nav-item-->
+            <!--            i.icon-user-->
+            <!--            span.left-nav-text John Username-->
+            <!---->
+            <!--    li.left-nav-->
+            <!--        a(href="#").left-nav-item-->
+            <!--            i.icon-settings-->
+            <!--            span.left-nav-text Settings-->
+            <!---->
+            <!---->
           </nav>
         </aside>
         <!--Sidebar end-->
         <main class="dashboard-container">
-          <!--Common Header Holodome logo...-->
           <header>
             <nav class="navbar navbar-expand-lg"><a href="#" class="navbar-brand">!R Studio</a>
               <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                   <li class="nav-item active"><a href="#" class="nav-link">Home<span class="sr-only">(current)</span></a></li>
-                  <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
-                  <li class="nav-item dropdown"><a id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
-                    <div aria-labelledby="navbarDropdown" class="dropdown-menu"><a href="#" class="dropdown-item">Action</a><a href="#" class="dropdown-item">Another action</a>
-                      <div class="dropdown-divider"></div><a href="#" class="dropdown-item">Something else here</a>
-                    </div>
-                  </li>
-                  <li class="nav-item"><a href="#" tabindex="-1" aria-disabled="true" class="nav-link disabled">Disabled</a></li>
+                  <!--li.nav-item-->
+                  <!--    a.nav-link(href='#') Link-->
+                  <!--li.nav-item.dropdown-->
+                  <!--    a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')-->
+                  <!--        | Dropdown-->
+                  <!--    .dropdown-menu(aria-labelledby='navbarDropdown')-->
+                  <!--        a.dropdown-item(href='#') Action-->
+                  <!--        a.dropdown-item(href='#') Another action-->
+                  <!--        .dropdown-divider-->
+                  <!--        a.dropdown-item(href='#') Something else here-->
+                  <!--li.nav-item-->
+                  <!--    a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled-->
                 </ul>
                 <ul class="navbar-nav">
-                  <li class="nav-item"><a href="#" class="nav-link"><i class="icon-menu"></i></a></li>
+                  <li class="nav-item"><a href="#" id="menu-1" class="nav-link"><i class="icon-menu"></i></a></li>
                 </ul>
               </div>
             </nav>
@@ -66,7 +99,15 @@
           <!--Dashboard Content Scrollable-->
           <section class="dashboard-content">
             <!--Dark background section-->
-            <div class="card card-section">Studio</div>
+            <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-section">
+                    <button class="btn btn-primary">Button 1</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
           <section class="dashboard-footer">I am footer</section>
         </main>
@@ -81,7 +122,22 @@
                 </div>
                 <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample" class="collapse show">
                   <div class="card-body">
-                    <div class="h-75v overflow-scroll">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</div>
+                    <div class="h-75v overflow-scroll">
+                      <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail33">Width</label>
+                          <input id="exampleInputEmail33" type="text" aria-describedby="emailHelp" placeholder="Enter Width" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword2">Height</label>
+                          <input id="exampleInputPassword2" type="text" placeholder="Enter Height" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword3">Color</label>
+                          <input id="exampleInputPassword3" type="color" placeholder="Select Color" class="form-control">
+                        </div>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>

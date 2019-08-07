@@ -7,49 +7,54 @@ aside
         ul.d-flex.flex-column.flex-grow-1.list-unstyled
             li.left-nav.active
                 a(href="#").left-nav-item
-                    i.icon-customers
-                    span.left-nav-text Customer
+                    i.fas.fa-border-style
+                    span.left-nav-text(draggable="true")
+                        input.form-control(placeholder="Input", disabled)
+
+
             li.left-nav-seperator
             li.left-nav
                 a(href="#").left-nav-item
                     i.icon-home
-                    span.left-nav-text Home
-
-
-            li.left-nav
-                a(href="#").left-nav-item
-                    i.icon-system
-                    span.left-nav-text System
-
-            li.left-nav
-                a(href="#").left-nav-item
-                    i.icon-media
-                    span.left-nav-text Media
-
-            li.left-nav
-                a(href="#").left-nav-item
-                    i.icon-reports
-                    span.left-nav-text Reports
-
-
-        ul.d-flex.flex-column.list-unstyled
-
-            li.left-nav
-                a.left-nav-item(href='#')
-                    i.icon-support
                     span.left-nav-text
-                        | Support ( Zendesk
-                        i.icon-export.ml-2.mr-1
-                        |  )
+                        button.btn.btn-primary(draggable="true")#drag1
+                            | Button
+
 
             li.left-nav
                 a(href="#").left-nav-item
-                    i.icon-user
-                    span.left-nav-text John Username
-
-            li.left-nav
-                a(href="#").left-nav-item
-                    i.icon-settings
-                    span.left-nav-text Settings
-
-
+                    i.fas.fa-font
+                    span.left-nav-text(draggable="true" ondragstart="drag(event)") Text
+        //
+        //    li.left-nav
+        //        a(href="#").left-nav-item
+        //            i.icon-media
+        //            span.left-nav-text Media
+        //
+        //    li.left-nav
+        //        a(href="#").left-nav-item
+        //            i.icon-reports
+        //            span.left-nav-text Reports
+        //
+        //
+        //ul.d-flex.flex-column.list-unstyled
+        //
+        //    li.left-nav
+        //        a.left-nav-item(href='#')
+        //            i.icon-support
+        //            span.left-nav-text
+        //                | Support ( Zendesk
+        //                i.icon-export.ml-2.mr-1
+        //                |  )
+        //
+        //    li.left-nav
+        //        a(href="#").left-nav-item
+        //            i.icon-user
+        //            span.left-nav-text John Username
+        //
+        //    li.left-nav
+        //        a(href="#").left-nav-item
+        //            i.icon-settings
+        //            span.left-nav-text Settings
+        //
+        //

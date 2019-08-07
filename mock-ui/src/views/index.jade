@@ -1,7 +1,6 @@
 extends ./layouts/base-layout.jade
 block content
     main.dashboard-container
-        //Common Header Holodome logo...
         include components/common-header/common-header
 
         section.dashboard-header
@@ -11,8 +10,11 @@ block content
         //Dashboard Content Scrollable
         section.dashboard-content
             //Dark background section
-            div.card.card-section
-               | Studio
+            .col
+                div.card
+                    .card-body
+                        .card-section
+                             button.btn.btn-primary Button 1
 
         section.dashboard-footer
             | I am footer

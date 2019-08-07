@@ -7,7 +7,7 @@ $left-nav-menu-font-size: 1.375rem !default;
 $left-nav-menu-icon-font-size: 1.5rem !default;
 
 .left-nav-wrapper {
-    position: absolute;
+    //position: absolute;
     overflow: hidden;
     display: flex;
     flex: 1 1 100%;
@@ -57,7 +57,8 @@ $left-nav-menu-icon-font-size: 1.5rem !default;
                 max-height: 2.375rem;
                 position: relative;
                 @include f-l();
-                > *[class^='icon-'] { //Menu Icon
+                > *[class^='icon-'],
+                .fas{ //Menu Icon
                     font-size: $left-nav-menu-icon-font-size;
                     width: $left-nav-menu-width;
                     text-align: center;
