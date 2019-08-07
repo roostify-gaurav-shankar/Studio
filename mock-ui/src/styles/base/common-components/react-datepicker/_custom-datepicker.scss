@@ -1,0 +1,30 @@
+//.react-datepicker__day-name,
+//.react-datepicker__day,
+//.react-datepicker__time-name {
+//    background-color: $datepicker__day-bg;
+//}
+.react-datepicker__day--outside-month{
+    &:not(.react-datepicker__day--selected){
+        background-color: #405057;
+        color: rgba(255,255,255,0.5);
+    }
+}
+.form-control-custom-icon{       //NOT ABLE TO ADD CUSTOM CLASS TO react-datepicker-wrapper
+    .react-datepicker-wrapper{
+        .react-datepicker__input-container{
+            &:after{
+                @include icon-calender();
+                color: $input-color;
+                position: absolute;
+                right: 0.625rem;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+        .form-control{
+            padding-right: 1.825rem;
+        }
+    }
+}
+

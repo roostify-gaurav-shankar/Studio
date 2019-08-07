@@ -1,0 +1,39 @@
+.loader{
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    //height: 100px;
+    min-width: 100px;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+//Page Block Loader place it outside "dashboard-container"
+.loader-page-block{
+    @include absolute-center();
+    z-index: $zindex-page-block-loader;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85);
+    cursor: default;
+}
+
+//Button Loader
+.loader-button{
+    transform: scale(0.4);
+    width: 1.25rem;
+    height: inherit;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: inherit;
+}

@@ -1,0 +1,50 @@
+
+@mixin transform ($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  -ms-transform: $value;
+  transform: $value;
+}
+
+@mixin f-r($default:400 ){
+    font-weight: $default;
+}
+@mixin f-i($default:italic){
+    font-style: $default;
+}
+
+@mixin f-l($default:300){
+    font-weight: $default;
+}
+@mixin f-b($default:700){
+    font-weight: $default;
+}
+@mixin f-sb($default:500d){
+    font-weight: $default;
+}
+@mixin scroll-y(){
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@mixin absolute-center(){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+%badge{
+    position: absolute;
+    width: $badge-size;
+    height: $badge-size;
+    border-radius: $badge-border-radius;
+    border: 0.125rem solid #ffffff;
+    overflow: hidden;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

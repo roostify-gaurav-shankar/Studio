@@ -1,0 +1,89 @@
+$left-nav-menu-width: 5rem !default;
+$left-nav-menu-width-open: 20rem !default;
+$left-nav-menu-z-index: 1031 !default;
+$left-nav-menu-active-indicator: #3AB3E2 !default;
+
+$left-nav-menu-font-size: 1.375rem !default;
+$left-nav-menu-icon-font-size: 1.5rem !default;
+
+.left-nav-wrapper {
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    width: $left-nav-menu-width;
+    height: 100%;
+    z-index: $left-nav-menu-z-index;
+    visibility: visible;
+    transform: translate3d(0, 0, 0); // Smooth Slide out
+    transition: transform 0.25s, width 0.25s;
+    background: #132229 url("#{$bg-img-base-path}/left-nav/left-nav-bg-lg.svg") no-repeat fixed left top;
+    padding-top: 1.25rem;
+
+    //box-shadow: 0 4px 4px 0 rgba(153,153,153,0.50);
+    @media (max-height: 1023px) { //TODO Fix for background image not covering full with of LeftNavBar, image resizing
+        background-size: cover;
+    }
+    //@-moz-document url-prefix() {     //TODO fix for Firefox, background position
+    //    background-size: cover;
+    //}
+    &.open {
+        width: $left-nav-menu-width-open;
+        //background: #132229 url("#{$bg-img-base-path}/left-nav/left-nav-bg-lg.svg") no-repeat left top;
+        ul > .left-nav > .left-nav-item {
+            .left-nav-text {
+                width: calc(100% - #{$left-nav-menu-width});
+                visibility: visible;
+            }
+        }
+
+    }
+    ul {
+        > .left-nav-seperator {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 0 1.25rem 1.5rem 1.25rem;
+        }
+        > .left-nav {
+            margin-bottom: 1.5rem;
+            display: flex;
+
+            > .left-nav-item {
+                display: flex;
+                align-items: center;
+                font-size: $left-nav-menu-font-size;
+                padding: 0.5rem 0;
+                line-height: 2.375rem; //TODO required for left menu active indicator
+                max-height: 2.375rem;
+                position: relative;
+                @include f-l();
+                > *[class^='icon-'] { //Menu Icon
+                    font-size: $left-nav-menu-icon-font-size;
+                    width: $left-nav-menu-width;
+                    text-align: center;
+                    display: inline-block;
+                }
+                .left-nav-text { // Menu Text
+                    width: 0;
+                    display: inline-block;
+                    vertical-align: middle;
+                    visibility: hidden;
+                    transition: 0.25s linear width, 0.25s linear visibility;
+                    white-space: nowrap;
+                }
+                .badge {
+                    @extend %badge;
+                    top: 0;
+                    left: 2.5625rem;
+                }
+            }
+
+
+            &.active {
+                > .left-nav-item {
+                    box-shadow: 0.5rem 0 0px -1px $left-nav-menu-active-indicator inset; //Left Menu active indicator.
+                }
+            }
+        }
+    }
+}

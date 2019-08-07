@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="15" viewBox="0 0 12 15">
+  <title>sort-descending</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <g opacity="0.5">
+          <path d="M6,15H5.8L.1,9.4A.4.4,0,0,1,0,9.1H12a.4.4,0,0,1-.1.3L6.2,14.9Z" fill="#fff"/>
+        </g>
+        <path d="M6,0H5.8L.1,5.6a.4.4,0,0,0-.1.3H12a.4.4,0,0,0-.1-.3L6.2.1Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

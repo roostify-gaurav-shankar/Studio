@@ -1,0 +1,65 @@
+$customer-card-header-spacing: 0.75rem 0.9375rem;
+$customer-card-cover-spacing:  0.375rem 0.9375rem;
+$customer-card-size: 17.5rem;
+.customer-landing-wrapper{
+    padding: 0.875rem 1.875rem;
+    .customer-card{
+        max-width: $customer-card-size;
+        min-width: $customer-card-size;
+        width: $customer-card-size;
+        min-height: $customer-card-size;
+        flex: 1 1 $customer-card-size;
+        margin-bottom: 2*$card-deck-margin;
+        .card-header{
+           padding: $customer-card-header-spacing;
+            background-color: $dark;
+        }
+        .card-cover,
+        .card-body{
+            padding: $customer-card-cover-spacing;
+        }
+        .card-body{
+            background-color: #6C7D84;
+            img{
+                max-width: 7.5rem;
+                max-height: 5.375rem;
+            }
+        }
+        .card-footer{
+            //padding: 0;
+        }
+        .card-cover{
+            background-color: $body-bg;
+        }
+
+        .badge{
+            @extend %badge;
+            right: -$badge-size/2;
+            top: -$badge-size/2;
+        }
+        .customer-card-status{
+            background-color: #36424D;
+        }
+    }
+    .card-new{
+        background-color: $dark;
+        line-height: 1.21;
+    }
+    .card-subtitle{
+        margin-top: 0;
+    }
+    .card-venue{          // A variant of card only for venue
+        background-color: #283A42;
+        .form-control, .custom-select{
+            background-color: transparent;
+        }
+    }
+}
+.customer-logo-wrapper{
+    //max-height: 4rem;
+    img{
+        max-width: 18.75rem;
+    }
+}
+
+

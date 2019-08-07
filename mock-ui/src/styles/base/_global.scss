@@ -1,0 +1,169 @@
+html {
+    @include rem-baseline;
+    @include media-breakpoint-between(sm, md){
+        font-size: 85%;
+    }
+    @media (min-width: 1025px) and (max-width: 1366px)  {
+        font-size: 75%;
+    }
+}
+
+html, body {
+    min-height: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    @at-root body{
+        display: flex;
+        flex-direction: column;
+    }
+    *:focus, *.focus {
+        box-shadow: none;
+        outline: 0;
+        outline: none;
+    }
+}
+
+//main-content
+
+.main-content {
+    display: flex;
+    flex: 1 1 100%;
+}
+
+select {
+    -webkit-appearance: none;
+}
+
+b {
+    @include f-b();
+    font-weight: normal;
+}
+
+
+$joyride-tooltip-arrow-size: 1rem;
+//$joyride-tooltip-arrow-height: $joyride-tooltip-arrow-size;
+$joyride-tooltip-arrow-color: #11ff00;//transparent;//#ffffff;
+$joyride-tooltip-border-width: 0.0625rem;
+$arrow-container-border-width: $joyride-tooltip-border-width;//$joyride-tooltip-border-width;
+$arrow-container-bg: #ffffff;
+$arrow-color: $arrow-container-bg;
+
+@mixin arrow-base(){
+    background-color: $arrow-container-bg;
+    border: $joyride-tooltip-border-width solid $joyride-tooltip-arrow-color;
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    padding: 12px 24px;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    margin: 70px auto;
+    height: 300px;
+}
+@mixin arrow-reset(){
+    position: absolute;
+    height: 0;
+    width: 0;
+    content: '';
+}
+
+@mixin arrow($direction, $width , $color){
+    @include arrow-base();
+    @if $direction == bottom {
+        &:after,
+        &:before{
+            @include arrow-reset();
+            border-left: $width solid transparent;
+            border-right: $width solid transparent;
+            border-top: $width solid $color;
+            bottom: -($width);
+            margin-left: -($width);
+            left: 50%;
+        }
+        &:before{
+            border-left: ($width + $arrow-container-border-width) solid transparent;
+            border-right: ($width+ $arrow-container-border-width) solid transparent;
+            border-top: ($width+ $arrow-container-border-width) solid;
+            border-top-color: inherit; /* Can't be included in the shorthand to work */
+            bottom: -($width + $arrow-container-border-width);
+            margin-left: -($width + $arrow-container-border-width);
+        }
+    } @else if $direction == top {
+        &:after,
+        &:before{
+            @include arrow-reset();
+            border-left: $width solid transparent;
+            border-right: $width solid transparent;
+            border-bottom: $width solid $color;
+            top: -($width);
+            margin-left: -($width);
+            left: 50%;
+        }
+        &:before{
+            border-left: ($width + $arrow-container-border-width) solid transparent;
+            border-right: ($width+ $arrow-container-border-width) solid transparent;
+            border-bottom: ($width+ $arrow-container-border-width) solid;
+            border-bottom-color: inherit; /* Can't be included in the shorthand to work */
+            top: -($width + $arrow-container-border-width);
+            margin-left: -($width + $arrow-container-border-width);
+        }
+    }
+    @else if($direction == left){
+        @include arrow-base();
+        &:after,
+        &:before{
+            @include arrow-reset();
+            border-top: $width solid transparent;
+            border-bottom: $width solid transparent;
+            border-right: $width solid $color;
+            left: -($width);
+            margin-top: -($width);
+            top: 50%;
+        }
+        &:before{
+            border-top: ($width + $arrow-container-border-width) solid transparent;
+            border-bottom: ($width+ $arrow-container-border-width) solid transparent;
+            border-right: ($width+ $arrow-container-border-width) solid;
+            border-right-color: inherit; /* Can't be included in the shorthand to work */
+            left: -($width + $arrow-container-border-width);
+            bottom: $width + $arrow-container-border-width;
+            margin-top: -($width + $arrow-container-border-width);
+        }
+    }
+    @else if($direction == right){
+        &:after,
+        &:before{
+            @include arrow-reset();
+            border-top: $width solid transparent;
+            border-bottom: $width solid transparent;
+            border-left: $width solid $color;
+            right: -($width);
+            margin-top: -($width);
+            top: 50%;
+        }
+        &:before{
+            border-top: ($width + $arrow-container-border-width) solid transparent;
+            border-bottom: ($width+ $arrow-container-border-width) solid transparent;
+            border-left: ($width+ $arrow-container-border-width) solid;
+            border-left-color: inherit; /* Can't be included in the shorthand to work */
+            right: -($width + $arrow-container-border-width);
+            bottom: $width + $arrow-container-border-width ;
+            margin-top: -($width + $arrow-container-border-width);
+        }
+    }
+}
+
+
+
+.joyride-tooltip__triangle {
+    //@include arrow(bottom, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-color);
+    //@include arrow(left, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-color);
+    //@include arrow(top, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-color);
+    //@include arrow(left, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-size, $joyride-tooltip-arrow-color);
+    @include arrow(top, $joyride-tooltip-arrow-size, $arrow-color);
+}
+

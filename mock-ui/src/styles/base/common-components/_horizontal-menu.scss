@@ -1,0 +1,37 @@
+//List Horizontal
+.list-pipe{
+    display: flex;
+    align-items: center;
+    @at-root .list-inline{
+        margin-bottom: 0.625rem;
+    }
+    .list-inline-item{
+
+        & + .list-inline-item {
+            &:not(.no-pipe){
+                &:before{
+                    //display: inline-block;
+                    padding-right: .5rem;
+                    color: $white;
+                    content: "|";
+                }
+            }
+        }
+    }
+}
+//Large(Extra Spacing Between li)Horizontal menu
+.list-pipe-lg{
+    .list-inline-item {
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+        & + .list-inline-item {
+            &:before{
+                margin-right: 1.5rem;
+
+            }
+        }
+    }
+}
+

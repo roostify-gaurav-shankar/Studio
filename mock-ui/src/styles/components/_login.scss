@@ -1,0 +1,42 @@
+
+.card-login {
+    //width: 20.625rem;
+    width: 22rem;
+    .login-logo{
+        //font-size: 2.875rem;
+        font-size: 2.375rem;
+        margin-bottom: 1.5625rem;
+        margin-top: 0;
+        @include f-l;
+    }
+    .login-subheading{
+        font-size: 1.25rem;
+        margin-bottom: 1.875rem;
+    }
+    .form-group{
+        margin-bottom: 1.5625rem;
+    }
+    .forgot-password{
+        font-size: 0.75rem;
+        color: rgba(153,154,162,1);
+    }
+    .btn-login{
+        //border: 1px solid rgba(255,255,255,0.20);
+        background-color: rgba(255,255,255,0.20);
+        color: rgba(255,255,255, 0.20);
+        text-transform: capitalize;
+        &:hover{
+            color: rgba(255,255,255, 1);
+            border-color: rgba(0255,255,255,0.40);
+        }
+        &:focus,
+        &:active{
+            color: rgba(255,255,255, 1);
+            border-color: transparent;
+        }
+    }
+}
+
+
+
+

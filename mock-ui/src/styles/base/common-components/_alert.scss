@@ -1,0 +1,11 @@
+.alert{
+    font-size: $alert-font-size;
+    line-height: 1.375rem;
+    color: $alert-color;
+    .media-left{
+        padding-right: 1rem;
+        *[class^="icon"]{
+            font-size: 1.625rem;
+        }
+    }
+}

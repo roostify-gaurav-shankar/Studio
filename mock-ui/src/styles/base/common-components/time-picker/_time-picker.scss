@@ -1,0 +1,66 @@
+//Time Picker Variables.
+$time-picker-body-bg: #11242e !default;
+$time-picker-border-color: #707C82 !default;
+$time-picker-popover-body-padding: 0 !default;
+
+$time-picker-popover-arrow-outer-color: $time-picker-body-bg !default;
+$time-picker-popover-arrow-color: $time-picker-border-color !default;
+
+
+.time-picker-popover{
+    &.popover{
+        background-color: $time-picker-body-bg;
+        border-color: $time-picker-border-color;
+    }
+    .popover-body{
+        padding: $time-picker-popover-body-padding;
+        position: relative;
+    }
+    &.bs-popover-bottom {      //Change in default popover notch color only bottom notch. default no change.
+        .arrow::before {
+            border-bottom-color: $time-picker-popover-arrow-color;
+        }
+        .arrow::after {
+            border-bottom-color: $time-picker-popover-arrow-outer-color;
+        }
+    }
+    .list-inline-item{
+        color: $time-picker-border-color;
+    }
+}
+
+.custom-addon-input{
+    .form-control{
+        color: #ffffff;
+        transition: 0.5s color cubic-bezier(0.2, 0.8, 0.2, 1.2), 0.5s background cubic-bezier(0.2, 0.8, 0.2, 1.2), 0.5s border cubic-bezier(0.2, 0.8, 0.2, 1.2);
+        &:focus{
+            color: #000000;
+        }
+        &[readonly]{
+            background-color: $input-bg;
+            color: $input-color;
+        }
+    }
+    .was-validated .form-control{
+        &:invalid{
+            background-color: #425259;
+        }
+    }
+    .input-group{
+        .form-control{
+            padding-right: 2.5rem;
+        }
+        .input-group-append{
+            cursor: pointer;
+            position: absolute;
+            right: 0.625rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: $zindex-dropdown;
+        }
+        .input-group-text{
+            border: 0;
+            padding: 0;
+        }
+    }
+}

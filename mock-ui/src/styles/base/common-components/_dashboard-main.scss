@@ -1,0 +1,83 @@
+.site-wrapper,
+.main-content,
+.nav,
+.sidebar,
+.notifications-popover{ // TODO Firefox bug fix, actually its chrome and Safari bug which implements min-height differently. this is for nested flexbox.
+    min-height: 0;
+}
+
+.dashboard-container {
+    overflow: hidden;
+    //overflow-x: hidden;
+    //overflow-y: auto;
+    //overflow: auto;
+    @media #{$ie-bug-fix} {
+        max-width: calc(100% - #{$dashboard-container-left-margin});
+    }
+    display: flex;
+    flex: 1 100%;
+    flex-direction: column;
+    position: relative;
+    background-color: $dashboard-container-bg;
+    margin-left: $dashboard-container-left-margin;
+    .dashboard-header {
+        padding: 0.625rem 1.875rem;
+        .custom-select{
+            max-width: 18.125rem;
+        }
+    }
+
+    .dashboard-content {
+        flex: 1;
+        overflow-x: hidden;
+        @include scroll-y();
+        .dashboard-content-spacing{
+            padding: 0.625rem 1.875rem;
+        }
+    }
+
+    &.dashboard-compressed {
+        .dashboard-header,
+        .dashboard-content {
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+.dashboard-footer {
+    // padding: 1rem;
+
+}
+
+.page-header{
+}
+.page-title{
+    //width: 350px;
+    //flex: 0 0 350px;
+    //white-space: nowrap;
+    //overflow: hidden;
+    //text-overflow: ellipsis;
+}
+
+
+//.page-sub-header{
+//    padding: 1rem;
+//    box-shadow: $sub-header-box-shadow;
+//}
+
+.nav-icons-wrapper{
+    font-size: 1.75rem;
+    color: $white;
+    .nav-icon{
+        transition: 0.3s linear color;
+        &:not(:last-child){
+            padding-right: 1.25rem;
+        }
+
+        &.active,&:hover{
+            color: #3AB3E2;
+        }
+    }
+}
+
+

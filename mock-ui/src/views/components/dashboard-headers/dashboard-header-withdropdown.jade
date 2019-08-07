@@ -1,0 +1,21 @@
+include dashboard-header-with-btn
+div.d-flex.justify-content-between.pt-4
+    div.d-flex.w-50
+        select.custom-select.mr-3
+            option(selected='') All stores
+            option(value='1') One
+            option(value='2') Two
+            option(value='3') Three
+
+        select.custom-select
+            option(selected='') All stores
+            option(value='1') One
+            option(value='2') Two
+            option(value='3') Three
+    div
+        button.btn.btn-info.align-self-center Export...
+
+div.pt-3
+    include ../dropdowns/dropdown-with-checkbox
+
+

@@ -1,0 +1,119 @@
+$notifications-popover-body-bg: #405057;
+$notifications-popover-body-border-color: #11252E;
+$notifications-popover-body-padding: 0.625rem;
+
+//Site Notification
+$site-notifications-popover-body-padding: 0.325rem;
+$site-notifications-alert-padding: 0.625rem;
+
+
+//Arrow style
+$notifications-popover-arrow-color: #405057;
+$notifications-popover-arrow-outer-color: #11252e;
+
+
+//Common Styles for Notification Popover(Sidebar), Site Notification and Notification Landing Page
+.notifications-popover{
+    background-color: $notifications-popover-body-bg;
+    border-color: $notifications-popover-body-border-color;
+    max-width: 35rem;
+    width: 100%;
+    .mark-read{
+        font-size: 0.8125rem;
+        padding: 0.25rem 0 0.875rem 0;
+    }
+    .view-all{
+        font-size: 0.9375rem;
+        padding: 1.25rem 0 0.625rem 0;
+    }
+    .popover-body{
+        padding: $notifications-popover-body-padding;
+        overflow: hidden;
+        position: relative;
+
+        .notifications-popover-container{
+            overflow-x: hidden;
+            @include scroll-y();
+            max-height: 80vh;
+            //min-height: 50vh;
+            @media #{$ie-bug-fix} {    //TODO IE bug fix..
+                max-height: 450px;
+            }
+        }
+        .list-group-item{
+            padding: 0;
+            margin-bottom: 0.25rem;
+            border-width: 0;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .alert{
+                padding: 1.5rem;
+                .site-notification &{     //Site notification.. alert.
+                    padding: $site-notifications-alert-padding;
+                }
+            }
+            .message{
+                font-size: 1.25rem;
+            }
+            .date{
+                font-size: 0.875rem;
+            }
+        }
+    }
+    &.bs-popover-right {      //Change in default popover size only right notch. default no change.
+        .arrow::before {
+            border-right-color: $notifications-popover-arrow-outer-color;
+        }
+        .arrow::after {
+            border-right-color: $notifications-popover-arrow-color;
+        }
+    }
+}
+.notification-message {
+    a {
+        @extend .d-inline-flex;
+        @extend .underline;
+        z-index: $zindex-click; // zindex  works with flex...
+    }
+}  // Required for clicking and going to zen desk..
+
+//Sidebar notification
+.sidebar-notification{
+    .notifications-popover-container{
+        min-height: 450px;
+    }
+}
+
+//Site Notification Top right notification...
+
+.site-notification{
+    //position: absolute;
+    //top: 1rem;
+    //right: 1rem;
+    //z-index: $zindex-popover;
+    //max-width: 300px;
+    @media #{$ie-bug-fix} {    //TODO IE bug fix..
+        width: 25rem;
+    }
+    .popover-body{
+        padding: $site-notifications-popover-body-padding;
+    }
+}
+
+//Notification Landing Page.
+.notification-landing{
+    max-width: 100%;
+    position: relative;
+    z-index: auto;
+    .popover-body{
+        display: flex;
+        flex: 1 100%;
+        flex-direction: column;
+        .notifications-popover-container{
+            @media #{$ie-bug-fix} {    //TODO IE bug fix..
+                max-height: 100%;
+            }
+        }
+    }
+}

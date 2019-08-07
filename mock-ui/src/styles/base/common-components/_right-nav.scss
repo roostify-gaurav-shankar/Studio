@@ -1,0 +1,42 @@
+$right-nav-menu-width: 0rem !default;
+$right-nav-menu-width-open: 20rem !default;
+$right-nav-menu-z-index: 1031 !default;
+$right-nav-menu-active-indicator: #3AB3E2 !default;
+
+$right-nav-menu-font-size: 1.375rem !default;
+$right-nav-menu-icon-font-size: 1.5rem !default;
+
+.right-nav-wrapper{
+  //position: absolute;
+  overflow: hidden;
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  width: $right-nav-menu-width;
+  height: 100%;
+  z-index: $right-nav-menu-z-index;
+  visibility: visible;
+  transform: translate3d(0, 0, 0); // Smooth Slide out
+  transition: transform 0.25s, width 0.25s;
+  background: #132229;
+  padding-top: 1.25rem;
+
+  //box-shadow: 0 4px 4px 0 rgba(153,153,153,0.50);
+  @media (max-height: 1023px) { //TODO Fix for background image not covering full with of rightNavBar, image resizing
+    background-size: cover;
+  }
+  //@-moz-document url-prefix() {     //TODO fix for Firefox, background position
+  //    background-size: cover;
+  //}
+  &.open {
+    width: $right-nav-menu-width-open;
+    //background: #132229 url("#{$bg-img-base-path}/right-nav/right-nav-bg-lg.svg") no-repeat right top;
+    ul > .right-nav > .right-nav-item {
+      .right-nav-text {
+        width: calc(100% - #{$right-nav-menu-width});
+        visibility: visible;
+      }
+    }
+
+  }
+}

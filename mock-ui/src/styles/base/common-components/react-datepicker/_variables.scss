@@ -1,0 +1,46 @@
+$datepicker__background-color: #0E1F26 !default;//#f0f0f0 !default;
+$datepicker__border-color: #707C82 !default;
+$datepicker__highlighted-color: #3dcc4a !default;
+$datepicker__muted-color: #ccc !default;
+$datepicker__selected-color: $primary !default;
+$datepicker__text-color: #ffffff !default;
+$datepicker__header-color: #ffffff !default;
+$datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 10%) !default;
+
+$datepicker__border-radius: 0rem !default;
+$datepicker__day-margin: 0.166rem !default;
+$datepicker__font-size: 0.9375rem !default;
+$datepicker__font-family: $font-regular;//"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$datepicker__item-size: 2rem !default;
+$datepicker__margin: 0.4rem !default;
+$datepicker__navigation-size: 0.45rem !default;
+$datepicker__triangle-size: 8px !default;
+///
+//Custom Variables
+$datepicker__bg-color: #0E1F26 !default;
+$datepicker__day-bg: #11252E !default;
+$datepicker__inline-margin-adjust: ($datepicker__day-margin - 0.125rem) !default; //Inline item has 0.125rem spacing.
+$month-navigation-top-space: 0.5rem;
+
+
+
+
+//$datepicker__background-color: #f0f0f0 !default;
+//$datepicker__border-color: #aeaeae !default;
+//$datepicker__highlighted-color: #3dcc4a !default;
+//$datepicker__muted-color: #ccc !default;
+//$datepicker__selected-color: #216ba5 !default;
+//$datepicker__text-color: #000 !default;
+//$datepicker__header-color: #000 !default;
+//$datepicker__navigation-disabled-color: lighten($datepicker__muted-color, 10%)
+//!default;
+//
+//$datepicker__border-radius: 0.3rem !default;
+//$datepicker__day-margin: 0.166rem !default;
+//$datepicker__font-size: 0.8rem !default;
+//$datepicker__font-family: "Helvetica Neue", Helvetica, Arial,
+//sans-serif !default;
+//$datepicker__item-size: 1.7rem !default;
+//$datepicker__margin: 0.4rem !default;
+//$datepicker__navigation-size: 0.45rem !default;
+//$datepicker__triangle-size: 8px !default;

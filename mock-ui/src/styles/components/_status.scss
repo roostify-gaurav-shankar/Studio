@@ -1,0 +1,143 @@
+$status-background: #B6B8BA;
+$status-background-active:  $success;//#84DC99;
+$status-background-inactive: #F98E89;
+$status-background-info: #6CD3E7;
+$status-background-danger: $danger;
+$status-background-unread: #ffffff;
+$status-background-read: transparent;
+
+//Graph Color
+$status-background-yellow: #CCC914;
+$status-background-teal: #50C5B7;
+$status-background-blue: #1C7286;
+$status-background-pink: #F16264;
+@mixin status-color(
+    $background:            $status-background
+) {
+    background-color: $background;
+
+}
+
+// -----------------------------------------------------------------------------
+
+$status-colors: (
+    name: 'active',
+    params: (
+        background: $status-background-active
+    )
+), (
+    name: 'inactive',
+    params:(
+        background: $status-background-inactive
+    )
+), (
+    name: 'info',
+    params:(
+        background: $status-background-info
+    )
+), (
+    name: 'danger',
+    params:(
+        background: $status-background-danger
+    )
+),(
+    name: 'yellow',
+    params:(
+        background: $status-background-yellow
+    )
+),(
+    name: 'teal',
+    params:(
+        background: $status-background-teal
+    )
+),(
+    name: 'blue',
+    params:(
+        background: $status-background-blue
+    )
+),(
+    name: 'pink',
+    params:(
+        background: $status-background-pink
+    )
+),(
+    name: 'read',
+    params:(
+        background: $status-background-read
+    )
+),(
+    name: 'unread',
+    params:(
+        background: $status-background-unread
+    )
+)
+
+;
+
+@mixin generate-status($size){
+    display: inline-block;
+    width: $size;
+    max-width: $size;
+    height: $size;
+    max-height: $size;
+    border-radius: 50%;
+}
+//@mixin generate-size($size){
+//    width: $size;
+//    height: $size;
+//}
+.status {
+    @include status-color();
+    @each $status-obj in $status-colors {
+        &-#{map-get($status-obj, name)} {
+            @include status-color(map-get($status-obj, params)...);
+        }
+    }
+    @include generate-status(2.25rem);
+    border: 3px solid $white;
+}
+.status-md{
+    @include status-color();
+    @each $status-obj in $status-colors {
+        &-#{map-get($status-obj, name)} {
+            @include status-color(map-get($status-obj, params)...);
+        }
+    }
+    @include generate-status(1em);
+    border: 1px solid $white;
+}
+.status-sm{
+    @include status-color();
+    @each $status-obj in $status-colors {
+        &-#{map-get($status-obj, name)} {
+            @include status-color(map-get($status-obj, params)...);
+        }
+    }
+    @include generate-status(0.75rem);
+}
+
+
+//Icon color for Status Icons...
+[class*='icon-status-']{
+    border-radius: 50%;
+
+}
+
+.icon-status-error{
+    background-color: $danger;
+}
+.icon-status-offline{
+    background-color: #667378;
+}
+.icon-status-online{
+    background-color: $success;
+}
+.icon-status-restarting{
+    background-color: #1276cc;
+}
+.icon-status-standby{
+    background-color: #D07EFF;
+}
+.icon-status-warning{
+    background-color: $warning;
+}

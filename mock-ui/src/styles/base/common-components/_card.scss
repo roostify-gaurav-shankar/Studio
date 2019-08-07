@@ -1,0 +1,58 @@
+.card-section{
+    padding: 0.8rem 1.1rem;
+}
+.card-shadow{
+  box-shadow: $card-shadows;
+}
+.card-body{
+    background-color: $card-body-bg;
+    position: relative;
+    //background-clip: content-box;
+}
+.card-title{
+    color: #C4C9CB;
+    font-size: 1rem;
+    @include f-sb();
+}
+.card-title-lg{
+    font-size: 1.25rem;
+    @include f-l();
+}
+.card-subtitle{
+    color: rgba(255, 255, 255, 0.81);
+    font-size: 0.8125rem;
+}
+//Popover Card
+.card-info{
+    position: absolute;
+    bottom: 0.4375rem;
+    right: 0.4375rem;
+    color: rgb(136,146,151);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+//Specific Cards
+//
+.card-value{
+    //min-width: 191px;
+    //min-height: 13.75rem;
+    .value{
+        font-size: 4.5rem;
+        @include f-l();
+    }
+}
+
+//Card Media
+.card-media{
+    max-width: 46.875rem;
+}
+
+//Card other than bg-dak and bg-secondary
+.card-dark{
+    background-color: #283A42;
+}
+.card-footer-dark{
+    background-color: #44575E;
+}

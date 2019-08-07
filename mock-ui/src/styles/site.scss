@@ -1,0 +1,36 @@
+
+
+//Base Styles  common to all the themes
+@import "base/base.scss";
+
+
+//Components Styles
+
+@import "components/sidebar";
+@import "components/status";
+@import "components/dropdown";
+@import "components/tab";
+@import "components/pagination";
+@import "components/sidebar-new";
+@import "components/notification/notification-popover";
+@import "components/schedule/schedule";
+@import "components/customer/customer-landing";
+
+
+//Pages Styles
+//
+@import "components/login";
+@import "page/entry-point";
+
+
+//IE Bug Fix.
+//@import "ie-bug-fix";
+
+//body{
+//    display: none;
+//    @media (pointer:coarse) {
+//        display: block;
+//    }
+//
+//}
+

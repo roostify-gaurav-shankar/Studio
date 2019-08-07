@@ -1,0 +1,13 @@
+$media-large-base-font-size: 1.25rem;
+$media-heading-font-size: 1.875rem;
+$media-subheading-font-size: 1.5rem;
+.media-large{
+    font-size: $media-large-base-font-size;
+}
+.media-heading{
+    font-size: $media-heading-font-size;
+}
+.media-subheading{
+    font-size: $media-subheading-font-size;
+    @include f-sb();
+}

@@ -1,0 +1,1044 @@
+/**
+icon-font Webfont
+*/
+//@base-url: fontURL; //icon-font
+
+//@base-url path is provided from variable.less file.
+
+ @font-face {
+	font-family: 'icon-font';
+	src: url('#{$font-icon-url}/icon-font.eot');
+	src: url('#{$font-icon-url}/icon-font.eot') format('embedded-opentype'),
+		url('#{$font-icon-url}/icon-font.woff2') format('woff2'),
+		url('#{$font-icon-url}/icon-font.woff?') format('woff'),
+		url('#{$font-icon-url}/icon-font.ttf?') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+.icon,
+%icon,
+*[class^='icon-']{
+	font-family: 'icon-font';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@function icon-char($filename) {
+  $char: "";
+
+@if $filename == activate {
+$char: "\E001";
+}
+@if $filename == add {
+$char: "\E002";
+}
+@if $filename == calender {
+$char: "\E003";
+}
+@if $filename == card-view {
+$char: "\E004";
+}
+@if $filename == caret-down {
+$char: "\E005";
+}
+@if $filename == caret-left {
+$char: "\E006";
+}
+@if $filename == check {
+$char: "\E007";
+}
+@if $filename == checkmark {
+$char: "\E008";
+}
+@if $filename == chevron-down {
+$char: "\E009";
+}
+@if $filename == chevron-left {
+$char: "\E00A";
+}
+@if $filename == chevron-right {
+$char: "\E00B";
+}
+@if $filename == chevron-up {
+$char: "\E00C";
+}
+@if $filename == close-round {
+$char: "\E00D";
+}
+@if $filename == close {
+$char: "\E00E";
+}
+@if $filename == config {
+$char: "\E00F";
+}
+@if $filename == customers {
+$char: "\E010";
+}
+@if $filename == deactivate {
+$char: "\E011";
+}
+@if $filename == details {
+$char: "\E012";
+}
+@if $filename == dont-menu {
+$char: "\E013";
+}
+@if $filename == dot-menu {
+$char: "\E014";
+}
+@if $filename == download {
+$char: "\E015";
+}
+@if $filename == edit {
+$char: "\E016";
+}
+@if $filename == error {
+$char: "\E017";
+}
+@if $filename == export {
+$char: "\E018";
+}
+@if $filename == home {
+$char: "\E019";
+}
+@if $filename == info {
+$char: "\E01A";
+}
+@if $filename == logo {
+$char: "\E01B";
+}
+@if $filename == logout {
+$char: "\E01C";
+}
+@if $filename == manage-user {
+$char: "\E01D";
+}
+@if $filename == map-view {
+$char: "\E01E";
+}
+@if $filename == media {
+$char: "\E01F";
+}
+@if $filename == menu {
+$char: "\E020";
+}
+@if $filename == meter {
+$char: "\E021";
+}
+@if $filename == minus {
+$char: "\E022";
+}
+@if $filename == notifications {
+$char: "\E023";
+}
+@if $filename == open-new-window {
+$char: "\E024";
+}
+@if $filename == pause {
+$char: "\E025";
+}
+@if $filename == reload {
+$char: "\E026";
+}
+@if $filename == remove {
+$char: "\E027";
+}
+@if $filename == reports {
+$char: "\E028";
+}
+@if $filename == restart {
+$char: "\E029";
+}
+@if $filename == resume {
+$char: "\E02A";
+}
+@if $filename == search {
+$char: "\E02B";
+}
+@if $filename == settings {
+$char: "\E02C";
+}
+@if $filename == show_password {
+$char: "\E02D";
+}
+@if $filename == sort-ascending {
+$char: "\E02E";
+}
+@if $filename == sort-descending {
+$char: "\E02F";
+}
+@if $filename == status-error {
+$char: "\E030";
+}
+@if $filename == status-offline {
+$char: "\E031";
+}
+@if $filename == status-online {
+$char: "\E032";
+}
+@if $filename == status-restarting {
+$char: "\E033";
+}
+@if $filename == status-standby {
+$char: "\E034";
+}
+@if $filename == status-warning {
+$char: "\E035";
+}
+@if $filename == support {
+$char: "\E036";
+}
+@if $filename == system {
+$char: "\E037";
+}
+@if $filename == table-view {
+$char: "\E038";
+}
+@if $filename == time {
+$char: "\E039";
+}
+@if $filename == trash {
+$char: "\E03A";
+}
+@if $filename == unlock {
+$char: "\E03B";
+}
+@if $filename == up {
+$char: "\E03C";
+}
+@if $filename == user {
+$char: "\E03D";
+}
+@if $filename == warning {
+$char: "\E03E";
+}
+
+@return $char;
+}
+
+@mixin icon($filename) {
+  content: icon-char($filename);
+}
+
+
+
+
+
+.icon-activate{
+  &:before {
+   @include icon(activate);
+  }
+}
+
+
+
+@mixin icon-activate {
+   @extend %icon;
+   @include icon(activate);
+}
+
+.icon-add{
+  &:before {
+   @include icon(add);
+  }
+}
+
+
+
+@mixin icon-add {
+   @extend %icon;
+   @include icon(add);
+}
+
+.icon-calender{
+  &:before {
+   @include icon(calender);
+  }
+}
+
+
+
+@mixin icon-calender {
+   @extend %icon;
+   @include icon(calender);
+}
+
+.icon-card-view{
+  &:before {
+   @include icon(card-view);
+  }
+}
+
+
+
+@mixin icon-card-view {
+   @extend %icon;
+   @include icon(card-view);
+}
+
+.icon-caret-down{
+  &:before {
+   @include icon(caret-down);
+  }
+}
+
+
+
+@mixin icon-caret-down {
+   @extend %icon;
+   @include icon(caret-down);
+}
+
+.icon-caret-left{
+  &:before {
+   @include icon(caret-left);
+  }
+}
+
+
+
+@mixin icon-caret-left {
+   @extend %icon;
+   @include icon(caret-left);
+}
+
+.icon-check{
+  &:before {
+   @include icon(check);
+  }
+}
+
+
+
+@mixin icon-check {
+   @extend %icon;
+   @include icon(check);
+}
+
+.icon-checkmark{
+  &:before {
+   @include icon(checkmark);
+  }
+}
+
+
+
+@mixin icon-checkmark {
+   @extend %icon;
+   @include icon(checkmark);
+}
+
+.icon-chevron-down{
+  &:before {
+   @include icon(chevron-down);
+  }
+}
+
+
+
+@mixin icon-chevron-down {
+   @extend %icon;
+   @include icon(chevron-down);
+}
+
+.icon-chevron-left{
+  &:before {
+   @include icon(chevron-left);
+  }
+}
+
+
+
+@mixin icon-chevron-left {
+   @extend %icon;
+   @include icon(chevron-left);
+}
+
+.icon-chevron-right{
+  &:before {
+   @include icon(chevron-right);
+  }
+}
+
+
+
+@mixin icon-chevron-right {
+   @extend %icon;
+   @include icon(chevron-right);
+}
+
+.icon-chevron-up{
+  &:before {
+   @include icon(chevron-up);
+  }
+}
+
+
+
+@mixin icon-chevron-up {
+   @extend %icon;
+   @include icon(chevron-up);
+}
+
+.icon-close-round{
+  &:before {
+   @include icon(close-round);
+  }
+}
+
+
+
+@mixin icon-close-round {
+   @extend %icon;
+   @include icon(close-round);
+}
+
+.icon-close{
+  &:before {
+   @include icon(close);
+  }
+}
+
+
+
+@mixin icon-close {
+   @extend %icon;
+   @include icon(close);
+}
+
+.icon-config{
+  &:before {
+   @include icon(config);
+  }
+}
+
+
+
+@mixin icon-config {
+   @extend %icon;
+   @include icon(config);
+}
+
+.icon-customers{
+  &:before {
+   @include icon(customers);
+  }
+}
+
+
+
+@mixin icon-customers {
+   @extend %icon;
+   @include icon(customers);
+}
+
+.icon-deactivate{
+  &:before {
+   @include icon(deactivate);
+  }
+}
+
+
+
+@mixin icon-deactivate {
+   @extend %icon;
+   @include icon(deactivate);
+}
+
+.icon-details{
+  &:before {
+   @include icon(details);
+  }
+}
+
+
+
+@mixin icon-details {
+   @extend %icon;
+   @include icon(details);
+}
+
+.icon-dont-menu{
+  &:before {
+   @include icon(dont-menu);
+  }
+}
+
+
+
+@mixin icon-dont-menu {
+   @extend %icon;
+   @include icon(dont-menu);
+}
+
+.icon-dot-menu{
+  &:before {
+   @include icon(dot-menu);
+  }
+}
+
+
+
+@mixin icon-dot-menu {
+   @extend %icon;
+   @include icon(dot-menu);
+}
+
+.icon-download{
+  &:before {
+   @include icon(download);
+  }
+}
+
+
+
+@mixin icon-download {
+   @extend %icon;
+   @include icon(download);
+}
+
+.icon-edit{
+  &:before {
+   @include icon(edit);
+  }
+}
+
+
+
+@mixin icon-edit {
+   @extend %icon;
+   @include icon(edit);
+}
+
+.icon-error{
+  &:before {
+   @include icon(error);
+  }
+}
+
+
+
+@mixin icon-error {
+   @extend %icon;
+   @include icon(error);
+}
+
+.icon-export{
+  &:before {
+   @include icon(export);
+  }
+}
+
+
+
+@mixin icon-export {
+   @extend %icon;
+   @include icon(export);
+}
+
+.icon-home{
+  &:before {
+   @include icon(home);
+  }
+}
+
+
+
+@mixin icon-home {
+   @extend %icon;
+   @include icon(home);
+}
+
+.icon-info{
+  &:before {
+   @include icon(info);
+  }
+}
+
+
+
+@mixin icon-info {
+   @extend %icon;
+   @include icon(info);
+}
+
+.icon-logo{
+  &:before {
+   @include icon(logo);
+  }
+}
+
+
+
+@mixin icon-logo {
+   @extend %icon;
+   @include icon(logo);
+}
+
+.icon-logout{
+  &:before {
+   @include icon(logout);
+  }
+}
+
+
+
+@mixin icon-logout {
+   @extend %icon;
+   @include icon(logout);
+}
+
+.icon-manage-user{
+  &:before {
+   @include icon(manage-user);
+  }
+}
+
+
+
+@mixin icon-manage-user {
+   @extend %icon;
+   @include icon(manage-user);
+}
+
+.icon-map-view{
+  &:before {
+   @include icon(map-view);
+  }
+}
+
+
+
+@mixin icon-map-view {
+   @extend %icon;
+   @include icon(map-view);
+}
+
+.icon-media{
+  &:before {
+   @include icon(media);
+  }
+}
+
+
+
+@mixin icon-media {
+   @extend %icon;
+   @include icon(media);
+}
+
+.icon-menu{
+  &:before {
+   @include icon(menu);
+  }
+}
+
+
+
+@mixin icon-menu {
+   @extend %icon;
+   @include icon(menu);
+}
+
+.icon-meter{
+  &:before {
+   @include icon(meter);
+  }
+}
+
+
+
+@mixin icon-meter {
+   @extend %icon;
+   @include icon(meter);
+}
+
+.icon-minus{
+  &:before {
+   @include icon(minus);
+  }
+}
+
+
+
+@mixin icon-minus {
+   @extend %icon;
+   @include icon(minus);
+}
+
+.icon-notifications{
+  &:before {
+   @include icon(notifications);
+  }
+}
+
+
+
+@mixin icon-notifications {
+   @extend %icon;
+   @include icon(notifications);
+}
+
+.icon-open-new-window{
+  &:before {
+   @include icon(open-new-window);
+  }
+}
+
+
+
+@mixin icon-open-new-window {
+   @extend %icon;
+   @include icon(open-new-window);
+}
+
+.icon-pause{
+  &:before {
+   @include icon(pause);
+  }
+}
+
+
+
+@mixin icon-pause {
+   @extend %icon;
+   @include icon(pause);
+}
+
+.icon-reload{
+  &:before {
+   @include icon(reload);
+  }
+}
+
+
+
+@mixin icon-reload {
+   @extend %icon;
+   @include icon(reload);
+}
+
+.icon-remove{
+  &:before {
+   @include icon(remove);
+  }
+}
+
+
+
+@mixin icon-remove {
+   @extend %icon;
+   @include icon(remove);
+}
+
+.icon-reports{
+  &:before {
+   @include icon(reports);
+  }
+}
+
+
+
+@mixin icon-reports {
+   @extend %icon;
+   @include icon(reports);
+}
+
+.icon-restart{
+  &:before {
+   @include icon(restart);
+  }
+}
+
+
+
+@mixin icon-restart {
+   @extend %icon;
+   @include icon(restart);
+}
+
+.icon-resume{
+  &:before {
+   @include icon(resume);
+  }
+}
+
+
+
+@mixin icon-resume {
+   @extend %icon;
+   @include icon(resume);
+}
+
+.icon-search{
+  &:before {
+   @include icon(search);
+  }
+}
+
+
+
+@mixin icon-search {
+   @extend %icon;
+   @include icon(search);
+}
+
+.icon-settings{
+  &:before {
+   @include icon(settings);
+  }
+}
+
+
+
+@mixin icon-settings {
+   @extend %icon;
+   @include icon(settings);
+}
+
+.icon-show_password{
+  &:before {
+   @include icon(show_password);
+  }
+}
+
+
+
+@mixin icon-show_password {
+   @extend %icon;
+   @include icon(show_password);
+}
+
+.icon-sort-ascending{
+  &:before {
+   @include icon(sort-ascending);
+  }
+}
+
+
+
+@mixin icon-sort-ascending {
+   @extend %icon;
+   @include icon(sort-ascending);
+}
+
+.icon-sort-descending{
+  &:before {
+   @include icon(sort-descending);
+  }
+}
+
+
+
+@mixin icon-sort-descending {
+   @extend %icon;
+   @include icon(sort-descending);
+}
+
+.icon-status-error{
+  &:before {
+   @include icon(status-error);
+  }
+}
+
+
+
+@mixin icon-status-error {
+   @extend %icon;
+   @include icon(status-error);
+}
+
+.icon-status-offline{
+  &:before {
+   @include icon(status-offline);
+  }
+}
+
+
+
+@mixin icon-status-offline {
+   @extend %icon;
+   @include icon(status-offline);
+}
+
+.icon-status-online{
+  &:before {
+   @include icon(status-online);
+  }
+}
+
+
+
+@mixin icon-status-online {
+   @extend %icon;
+   @include icon(status-online);
+}
+
+.icon-status-restarting{
+  &:before {
+   @include icon(status-restarting);
+  }
+}
+
+
+
+@mixin icon-status-restarting {
+   @extend %icon;
+   @include icon(status-restarting);
+}
+
+.icon-status-standby{
+  &:before {
+   @include icon(status-standby);
+  }
+}
+
+
+
+@mixin icon-status-standby {
+   @extend %icon;
+   @include icon(status-standby);
+}
+
+.icon-status-warning{
+  &:before {
+   @include icon(status-warning);
+  }
+}
+
+
+
+@mixin icon-status-warning {
+   @extend %icon;
+   @include icon(status-warning);
+}
+
+.icon-support{
+  &:before {
+   @include icon(support);
+  }
+}
+
+
+
+@mixin icon-support {
+   @extend %icon;
+   @include icon(support);
+}
+
+.icon-system{
+  &:before {
+   @include icon(system);
+  }
+}
+
+
+
+@mixin icon-system {
+   @extend %icon;
+   @include icon(system);
+}
+
+.icon-table-view{
+  &:before {
+   @include icon(table-view);
+  }
+}
+
+
+
+@mixin icon-table-view {
+   @extend %icon;
+   @include icon(table-view);
+}
+
+.icon-time{
+  &:before {
+   @include icon(time);
+  }
+}
+
+
+
+@mixin icon-time {
+   @extend %icon;
+   @include icon(time);
+}
+
+.icon-trash{
+  &:before {
+   @include icon(trash);
+  }
+}
+
+
+
+@mixin icon-trash {
+   @extend %icon;
+   @include icon(trash);
+}
+
+.icon-unlock{
+  &:before {
+   @include icon(unlock);
+  }
+}
+
+
+
+@mixin icon-unlock {
+   @extend %icon;
+   @include icon(unlock);
+}
+
+.icon-up{
+  &:before {
+   @include icon(up);
+  }
+}
+
+
+
+@mixin icon-up {
+   @extend %icon;
+   @include icon(up);
+}
+
+.icon-user{
+  &:before {
+   @include icon(user);
+  }
+}
+
+
+
+@mixin icon-user {
+   @extend %icon;
+   @include icon(user);
+}
+
+.icon-warning{
+  &:before {
+   @include icon(warning);
+  }
+}
+
+
+
+@mixin icon-warning {
+   @extend %icon;
+   @include icon(warning);
+}

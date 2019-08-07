@@ -1,0 +1,66 @@
+.overflow-scroll {
+    @include scroll-y();
+}
+
+//Link..
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.link {
+    @extend .cursor-pointer;
+}
+
+.underline {
+    @extend .cursor-pointer;
+    text-decoration: underline;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+//Center..
+.absolute-center {
+    @include absolute-center();
+}
+
+//Font
+
+$font-size-list: 10, 12, 13, 14, 15, 16, 18,20, 22, 24, 26, 28, 30, 32, 34, 36, 42, 50, 55, 60; //Generate font class (.f-*) cycles through font-size-list
+
+@each $font-size in $font-size-list {
+    .f-#{$font-size} {
+        font-size: ($font-size/16)*1rem !important; //Convert PX into rem...
+        //font-size: rem($font-size*1px);
+    }
+}
+//width
+$custom-width-fixed: 30, 35, 36;
+@each $width in $custom-width-fixed {
+    .w-#{$width} {
+        width: ($width/16)*1rem !important; //Convert PX into rem...
+    }
+}
+
+//No data
+.no-data{
+    min-height: rem(10px);
+}
+.text-offline{
+    color: #AFBFC4;
+}
+
+.h-24p {
+    height: rem(24px);
+}
+
+.h-10p {
+    height: rem(10px);
+}
+
+.icon-meter-size{
+    width: 2.5rem;
+}
+.h-75v{
+    max-height: 75vh;
+}

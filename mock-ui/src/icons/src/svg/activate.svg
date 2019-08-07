@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="icon-activate" transform="translate(-1715 -188)">
+    <path id="Path_3210" data-name="Path 3210" class="cls-1" d="M9.2,15.5,4.5,10.8,5.9,9.5l3.3,3.3,7.1-7,1.3,1.3Z" transform="translate(1715 188)"/>
+    <path id="Path_3211" data-name="Path 3211" class="cls-1" d="M11,22A11,11,0,1,1,22,11,10.968,10.968,0,0,1,11,22ZM11,2a9,9,0,1,0,9,9A8.963,8.963,0,0,0,11,2Z" transform="translate(1715 188)"/>
+  </g>
+</svg>

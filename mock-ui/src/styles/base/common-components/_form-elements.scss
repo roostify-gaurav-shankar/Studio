@@ -1,0 +1,73 @@
+.form-control {
+    font-size: 0.9375rem;
+    height: $custom-select-height;
+    &:disabled {
+        border-color: $gray-two;
+    }
+
+}
+
+.form-label {
+    color: $input-label-color;
+    font-size: 0.9375rem;
+}
+
+//Custom Select
+.custom-select {
+    background-position: right 0.25rem center;
+    font-size: 0.9375rem;
+}
+
+
+///////
+.search-input-group {
+    position: relative;
+    margin-bottom: 0;
+
+    &:before {
+        @include icon-search();
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: $gray-500;
+    }
+
+    > .form-control {
+        padding-left: rem(34px);
+        font-weight: 300;
+        font-size: rem(12px);
+        line-height: 22px;
+    }
+
+}
+
+
+
+//Textarea Resize Disable
+textarea {
+    resize: none;
+}
+
+//File
+.custom-file-input{
+    width: $custom-file-width-fixed;
+}
+.custom-file-label{
+    border-style: none;
+    width: $custom-file-width-fixed;
+    font-size: 0.9375rem;
+    background: linear-gradient(to right, #676774 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#676774 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(to right, #676774 50%, rgba(255, 255, 255, 0) 0%), linear-gradient(#676774 50%, rgba(255, 255, 255, 0) 0%);
+    background-position: top, right, bottom, left;
+    background-repeat: repeat-x, repeat-y;
+    background-size: 5px 2px, 2px 5px;
+    &:after{
+        display: none;
+    }
+}
+//#676774
+
+//remove X for form validation
+.form-control.is-invalid, .was-validated .form-control:invalid{ //TODO this to remove cross (X) for form validation icon for bootstrap 4.2 need to remove once Mocks is updated to 4.2
+    background-image: none !important;
+}
