@@ -11,7 +11,7 @@
     "balloon-css": "0.5.0",
     "bootstrap": "4.1.1",
     "gulp-iconfont-template": "0.0.3",
-    "jquery": "2.2.4",
+    "jquery": "3.4.0",
     "loaders.css": "^0.1.2",
     "offcanvas-bootstrap": "2.5.2",
     "popper.js": "1.14.3",
