@@ -76,7 +76,7 @@
     "if-env": "1.0.4",
     "isomorphic-style-loader": "1.1.0",
     "jest": "22.4.4",
-    "jsdom": "8.5.0",
+    "jsdom": "16.5.0",
     "mocha": "5.2.0",
     "popper.js": "1.14.3",
     "run-sequence": "1.2.2"
