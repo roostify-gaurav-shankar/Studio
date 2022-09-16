@@ -9,7 +9,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "balloon-css": "0.5.0",
-    "bootstrap": "4.1.1",
+    "bootstrap": "4.3.1",
     "gulp-iconfont-template": "0.0.3",
     "jquery": "2.2.4",
     "loaders.css": "^0.1.2",
